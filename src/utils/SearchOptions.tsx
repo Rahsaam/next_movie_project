@@ -1,6 +1,6 @@
-import { IConutryOptions } from "@/Types/SearchOptions";
+import { IInputOptions } from "@/Types/SearchOptions";
 
-export const countries: Array<IConutryOptions> = [
+export const countries: Array<IInputOptions> = [
   { value: "AD", label: "Andorra" },
   { value: "AE", label: "United Arab Emirates" },
   { value: "AF", label: "Afghanistan" },

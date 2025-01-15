@@ -14,15 +14,39 @@ export default function ToggleBtn() {
   };
 
   return (
-    <div>
+    <div className="h-14">
       <ToggleButtonGroup
         value={alignment}
         exclusive
         onChange={handleAlignment}
         aria-label="text alignment"
       >
-        <ToggleButton value="movie">movie</ToggleButton>
-        <ToggleButton value="tv">tv</ToggleButton>
+        <ToggleButton
+          value="movie"
+          sx={{
+            color: "white", // متن همیشه سفید
+            border: "1px solid white", // border سفید
+            "&.Mui-selected": {
+              backgroundColor: "orange !important", // پس‌زمینه هنگام انتخاب
+            },
+            
+          }}
+        >
+          movie
+        </ToggleButton>
+        <ToggleButton
+          value="tv"
+          sx={{
+            color: "white", // متن همیشه سفید
+            border: "1px solid white", // border سفید
+            "&.Mui-selected": {
+              backgroundColor: "orange !important", // پس‌زمینه هنگام انتخاب
+            },
+            
+          }}
+        >
+          tv
+        </ToggleButton>
       </ToggleButtonGroup>
     </div>
   );

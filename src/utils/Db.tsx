@@ -1,10 +1,8 @@
-import {  FaFilm, FaTv, FaList } from 'react-icons/fa';
+import { FaFilm, FaTv, FaList } from "react-icons/fa";
 import { IoCloudDownloadOutline, IoHomeOutline } from "react-icons/io5";
 
-
-
 export const MenuItems = [
-  { id: 1, title: "home", icon:<IoHomeOutline />, link: "#" },
+  { id: 1, title: "home", icon: <IoHomeOutline />, link: "#" },
   {
     id: 2,
     title: "submenu",
@@ -26,5 +24,10 @@ export const MenuItems = [
   },
   { id: 3, title: "Movies", icon: <FaFilm />, link: "../movies" },
   { id: 4, title: "Series", icon: <FaTv />, link: "../series" },
-  { id: 5, title: "Application", icon: <IoCloudDownloadOutline />, link: "#download" },
+  {
+    id: 5,
+    title: "Application",
+    icon: <IoCloudDownloadOutline />,
+    link: "#download",
+  },
 ];

@@ -2,14 +2,34 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
-import { IConutryOptionsProps } from "@/Types/SearchOptions";
+import { IInputOptionsProps } from "@/Types/SearchOptions";
 
-export default function SelectInput({items}: IConutryOptionsProps) {
+export default function SelectInput({ items, labelText }: IInputOptionsProps) {
   return (
     <div className="bg-[#242424] rounded-xl">
       <Box
         component="form"
-        sx={{ "& .MuiTextField-root": { m: 2, width: "25ch" } }}
+        sx={{
+          "& .MuiTextField-root": { width: "25ch" },
+          "& .MuiInputLabel-root": {
+            color: "white",
+          },
+          "& .MuiOutlinedInput-root": {
+            "& fieldset": {
+              borderColor: "white",
+            },
+            "&:hover fieldset": {
+              borderColor: "white",
+            },
+            "&.Mui-focused fieldset": {
+              borderColor: "white",
+            },
+            color: "white",
+          },
+          "& .MuiSvgIcon-root": {
+            color: "white",
+          },
+        }}
         noValidate
         autoComplete="off"
       >
@@ -17,9 +37,8 @@ export default function SelectInput({items}: IConutryOptionsProps) {
           <TextField
             id="outlined-select-currency"
             select
-            label="Country"
+            label={labelText}
             defaultValue="EUR"
-            helperText="Please select your country"
           >
             {items.map((option) => (
               <MenuItem key={option.value} value={option.value}>
